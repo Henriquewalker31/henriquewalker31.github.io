@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joanes Walker – Portfólio</title>
-  <meta name="description" content="Portfólio de Joanes Henrique Walker Cunha, analista de TI em Boa Vista (RR), com experiência em infraestrutura, suporte e projetos de desenvolvimento web full stack." />
+  <meta name="description" content="Portfólio de Joanes Henrique Walker Cunha, tecnólogo em Análise e Desenvolvimento de Sistemas com experiência em infraestrutura, suporte técnico, desenvolvimento full stack e automação." />
   <meta name="author" content="Joanes Henrique Walker Cunha" />
   <meta name="theme-color" content="#0f2a52" />
   <link rel="canonical" href="https://henriquewalker31.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://henriquewalker31.github.io/" />
   <meta property="og:title" content="Joanes Walker – Portfólio" />
-  <meta property="og:description" content="Analista de TI com experiência em infraestrutura, suporte e desenvolvimento web full stack." />
+  <meta property="og:description" content="Tecnólogo em ADS com experiência em infraestrutura, suporte técnico, desenvolvimento full stack e automação." />
   <meta property="og:image" content="https://henriquewalker31.github.io/assets/foto.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Joanes Walker – Portfólio" />
-  <meta name="twitter:description" content="Analista de TI com experiência em infraestrutura, suporte e desenvolvimento web full stack." />
+  <meta name="twitter:description" content="Tecnólogo em ADS com experiência em infraestrutura, suporte técnico, desenvolvimento full stack e automação." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f2a52'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='700' fill='%237ab3e0' text-anchor='middle'%3EJW%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <style>
@@ -145,6 +145,11 @@
     .exp-title { font-size: 14px; font-weight: 600; color: var(--text); }
     .exp-period { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: 8px; margin-top: 2px; }
     .exp-org { font-size: 12px; color: var(--accent); margin-top: 2px; margin-bottom: 8px; }
+    .exp-list { margin: 8px 0 0 16px; padding: 0; font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+    .exp-list li { margin-bottom: 3px; }
+    .exp-result { margin-top: 8px; padding: 8px 10px; border-left: 2px solid var(--accent); background: var(--bg); border-radius: 0 6px 6px 0; font-size: 12px; color: var(--text); }
+    .about-text { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+    .about-text + .about-text { margin-top: 10px; }
     .tags { display: flex; flex-wrap: wrap; gap: 5px; }
     .tag { font-size: 10px; padding: 2px 8px; border-radius: 3px; background: var(--tag-bg); color: var(--tag-color); border: 0.5px solid var(--border); }
     .tag-github { background: #0d1117; color: #e6edf3; border-color: #30363d; text-decoration: none; display: inline-flex; align-items: center; cursor: pointer; }
@@ -196,8 +201,8 @@
     @media (max-width: 680px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-inner { align-items: flex-start; }
-      .hero-stats { flex-direction: row; }
-      .stat-mini { text-align: left; min-width: unset; flex: 1; }
+      .hero-stats { flex-direction: row; flex-wrap: wrap; }
+      .stat-mini { text-align: left; min-width: unset; flex: 1 1 120px; }
       .main { grid-template-columns: 1fr; padding: 1rem; }
       .topbar { padding: 0 1rem; }
       .hero { padding: 1.5rem 1rem; }
@@ -324,14 +329,15 @@
       <div class="hero-inner">
         <img src="assets/foto.jpg" alt="Foto de Joanes Walker" class="hero-photo" />
         <div>
-        <div class="hero-tag">Analista de TI</div>
+        <div class="hero-tag">Tecnólogo em ADS</div>
         <div class="hero-title">Joanes Henrique<br>Walker Cunha</div>
-        <div class="hero-sub">Infraestrutura de TI &nbsp;·&nbsp; Desenvolvimento Web Full Stack &nbsp;·&nbsp; Boa Vista, RR</div>
+        <div class="hero-sub">Infraestrutura &nbsp;·&nbsp; Suporte Técnico &nbsp;·&nbsp; Full Stack &nbsp;·&nbsp; Automação &nbsp;·&nbsp; Boa Vista, RR</div>
         <div class="hero-badges">
           <span class="badge badge-blue"><i class="ti ti-server" style="font-size:11px;" aria-hidden="true"></i>Infraestrutura</span>
           <span class="badge badge-blue"><i class="ti ti-code" style="font-size:11px;" aria-hidden="true"></i>Full Stack</span>
-          <span class="badge badge-green"><i class="ti ti-circle-check" style="font-size:11px;" aria-hidden="true"></i>Setor público de saúde</span>
-          <span class="badge badge-blue"><i class="ti ti-school" style="font-size:11px;" aria-hidden="true"></i>ADS — Claretiano 2026</span>
+          <span class="badge badge-blue"><i class="ti ti-robot" style="font-size:11px;" aria-hidden="true"></i>Automação</span>
+          <span class="badge badge-green"><i class="ti ti-brand-windows" style="font-size:11px;" aria-hidden="true"></i>Microsoft 365</span>
+          <span class="badge badge-blue"><i class="ti ti-school" style="font-size:11px;" aria-hidden="true"></i>Tecnólogo — Claretiano 2026</span>
           <a href="https://github.com/Henriquewalker31" target="_blank" rel="noopener noreferrer" class="badge badge-blue" style="text-decoration:none;"><i class="ti ti-brand-github" style="font-size:11px;" aria-hidden="true"></i>GitHub</a>
         </div>
         <a class="btn-download" href="assets/curriculo.pdf" download="Curriculo_Joanes_Walker.pdf">
@@ -343,7 +349,11 @@
       <div class="hero-stats">
         <div class="stat-mini">
           <div class="stat-num">30+</div>
-          <div class="stat-label">unidades gerenciadas</div>
+          <div class="stat-label">unidades atendidas</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-num" data-static>4 mil+</div>
+          <div class="stat-label">chamados registrados</div>
         </div>
         <div class="stat-mini">
           <div class="stat-num">6</div>
@@ -358,26 +368,57 @@
 
     <div class="left-col">
 
+      <!-- SOBRE -->
+      <div class="card fade-up">
+        <div class="card-header">
+          <i class="ti ti-user card-icon" aria-hidden="true"></i>
+          <span class="card-title">Sobre</span>
+        </div>
+        <p class="about-text">Tecnólogo em Análise e Desenvolvimento de Sistemas, com experiência prática em Tecnologia da Informação atuando de forma integrada em infraestrutura, suporte técnico, desenvolvimento full stack e automação.</p>
+        <p class="about-text">Minha trajetória reúne experiências no setor público e privado, da manutenção de equipamentos e gestão de ativos à modernização de sistemas internos em produção. Acredito que a tecnologia vai além de manter sistemas funcionando: ela resolve problemas, integra áreas e gera resultados concretos.</p>
+        <p class="about-text">Busco evoluir continuamente em Desenvolvimento de Software, Infraestrutura, Administração de Sistemas e Automação.</p>
+      </div>
+
       <!-- EXPERIÊNCIA -->
       <div class="card fade-up">
         <div class="card-header">
           <i class="ti ti-briefcase card-icon" aria-hidden="true"></i>
           <span class="card-title">Experiência profissional</span>
         </div>
+
         <div class="exp-item">
           <div class="exp-row">
-            <div class="exp-title">Analista de TI – Infraestrutura e Suporte</div>
-            <span class="exp-period">2026 – Atual</span>
+            <div class="exp-title">Suporte de TI</div>
+            <span class="exp-period">set. 2026 – o momento</span>
           </div>
-          <div class="exp-org">Secretaria Municipal de Saúde · Prefeitura de Boa Vista</div>
+          <div class="exp-org">Hemissul Proteção Veicular · Tempo integral</div>
           <div class="tags">
-            <span class="tag">Helpdesk</span>
-            <span class="tag">Manutenção de hardware</span>
-            <span class="tag">Instalação de TI</span>
-            <span class="tag">Logística de equipamentos</span>
-            <span class="tag">30+ UBS e hospitais</span>
-            <span class="tag">Abertura de novas unidades</span>
+            <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">PostgreSQL</span><span class="tag">Heroku</span><span class="tag">Microsoft 365</span><span class="tag">CRM</span>
           </div>
+          <ul class="exp-list">
+            <li>Suporte técnico e infraestrutura: manutenção preventiva e corretiva, diagnóstico de hardware e software e atendimento aos usuários.</li>
+            <li>Administração de sistemas: Microsoft 365, CRMs, sistemas internos e aplicações hospedadas no Heroku.</li>
+            <li>Desenvolvimento: manutenção evolutiva, reformulação de interfaces e novas funcionalidades com Python, JavaScript e PostgreSQL.</li>
+            <li>Melhoria contínua: automação, modernização de ferramentas internas e otimização de processos.</li>
+          </ul>
+          <p class="exp-result">Liderei a modernização do sistema interno de atendimento usado na operação — mais de 4 mil chamados nos últimos seis meses — e fui reconhecido como destaque da semana no primeiro mês.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div class="exp-title">Suporte de TI (estágio)</div>
+            <span class="exp-period">fev. 2026 – jul. 2026</span>
+          </div>
+          <div class="exp-org">Prefeitura Municipal de Boa Vista · Secretaria Municipal de Saúde</div>
+          <div class="tags">
+            <span class="tag">Helpdesk</span><span class="tag">Hardware</span><span class="tag">Redes</span><span class="tag">Gestão de ativos</span><span class="tag">30+ unidades</span>
+          </div>
+          <ul class="exp-list">
+            <li>Suporte técnico e infraestrutura em mais de 30 unidades de saúde, incluindo UBS, hospitais e setores administrativos.</li>
+            <li>Montagem, instalação, configuração e manutenção de computadores e periféricos.</li>
+            <li>Organização, triagem, recuperação, reaproveitamento e redistribuição de equipamentos de TI.</li>
+            <li>Participação na implantação da infraestrutura de TI de uma nova Unidade Básica de Saúde.</li>
+          </ul>
         </div>
       </div>
 
@@ -442,16 +483,16 @@
           <span class="card-title">Habilidades técnicas</span>
         </div>
         <div class="skill-row"><span class="skill-name">Infraestrutura</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
-        <div class="skill-row"><span class="skill-name">Suporte / Helpdesk</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
+        <div class="skill-row"><span class="skill-name">Suporte / Helpdesk</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
+        <div class="skill-row"><span class="skill-name">Microsoft 365</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
         <div class="skill-row"><span class="skill-name">HTML & CSS</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div><span class="skill-pct">82%</span></div>
-        <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div><span class="skill-pct">75%</span></div>
-        <div class="skill-row"><span class="skill-name">MySQL</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
-        <div class="skill-row"><span class="skill-name">PHP</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
-        <div class="skill-row"><span class="skill-name">Python / FastAPI</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
-        <div class="skill-row"><span class="skill-name">Docker</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:60%"></div></div><span class="skill-pct">60%</span></div>
-        <div class="skill-row"><span class="skill-name">Symfony</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:55%"></div></div><span class="skill-pct">55%</span></div>
-        <div class="skill-row"><span class="skill-name">Next.js</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:60%"></div></div><span class="skill-pct">60%</span></div>
+        <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div>
+        <div class="skill-row"><span class="skill-name">Python</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div><span class="skill-pct">75%</span></div>
+        <div class="skill-row"><span class="skill-name">PostgreSQL / MySQL</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
+        <div class="skill-row"><span class="skill-name">Automação</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
         <div class="skill-row"><span class="skill-name">Git & GitHub</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
+        <div class="skill-row"><span class="skill-name">PHP</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
+        <div class="skill-row"><span class="skill-name">Docker</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:60%"></div></div><span class="skill-pct">60%</span></div>
       </div>
 
     </div>
@@ -492,10 +533,13 @@
           <i class="ti ti-school card-icon" aria-hidden="true"></i>
           <span class="card-title">Formação</span>
         </div>
-        <div class="exp-item" style="padding-top:0;">
-          <div class="exp-title" style="font-size:13px;">Análise e Desenvolvimento de Sistemas</div>
-          <div class="exp-org">Claretiano – Centro Universitário</div>
-          <div style="font-size:11px; color:var(--text-muted); margin-top:3px;">2024 – 2026</div>
+        <div class="exp-item" style="padding-top:0; border-bottom:none; padding-bottom:0;">
+          <div class="exp-title" style="font-size:13px;">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+          <div class="exp-org">Claretiano – Rede de Educação</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:3px;">fev. de 2024 – jul. de 2026</div>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Desenvolvimento Web</span><span class="tag">Java</span><span class="tag">Banco de Dados</span><span class="tag">Redes</span><span class="tag">Engenharia de Software</span><span class="tag">Segurança</span>
+          </div>
         </div>
       </div>
 
@@ -508,8 +552,8 @@
         <div class="cert-item">
           <i class="ti ti-cpu cert-icon" aria-hidden="true"></i>
           <div>
-            <div class="cert-name">IA e Indústria 4.0</div>
-            <div class="cert-org">Universidade Federal de Roraima – UFRR · 2024</div>
+            <div class="cert-name">Capacitação e Extensão em IA – Indústria 4.0 e Inovação Tecnológica</div>
+            <div class="cert-org">Universidade Federal de Roraima – UFRR · jun. de 2024</div>
           </div>
         </div>
       </div>
@@ -652,7 +696,7 @@
       }, step);
     }
 
-    const statNums = document.querySelectorAll('.stat-num');
+    const statNums = document.querySelectorAll('.stat-num:not([data-static])');
     const countObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
