@@ -103,7 +103,6 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
@@ -490,9 +489,8 @@ body.nav-locked {
 
 .hero-role {
   margin-top: 0.6rem;
-  max-width: 48ch;
   color: var(--accent);
-  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  font-size: clamp(1.0625rem, 1.6vw, 1.1875rem);
   font-weight: 500;
   line-height: 1.5;
 }
@@ -1320,6 +1318,32 @@ img.skill-icon {
   color: var(--danger);
 }
 
+/* Aviso flutuante (links "Demo" sem URL) */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 200;
+  max-width: calc(100vw - 2rem);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  font-size: 0.875rem;
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, 0.75rem);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .contact-form .btn {
   align-self: flex-start;
 }
@@ -1437,14 +1461,6 @@ img.skill-icon {
     gap: 1.6rem;
   }
 
-  .hero-role > span:not(.role-sep) {
-    display: inline;
-  }
-
-  .role-sep {
-    display: inline;
-  }
-
   .hero-photo {
     width: 132px;
     height: 132px;
@@ -1482,23 +1498,22 @@ img.skill-icon {
     padding: 3rem 0 3.5rem;
   }
 
-  .hero-grid {
-    grid-template-columns: minmax(0, 1fr) 240px;
-    align-items: center;
-    gap: 2.5rem;
-  }
-
   .hero-stats {
-    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
   .stat {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
     padding: 1rem 1.15rem;
   }
 
   .stat-label {
-    margin-top: 0.25rem;
+    margin-top: 0;
     text-align: left;
   }
 
@@ -1583,6 +1598,20 @@ img.skill-icon {
 
 /* 1024px+ — duas colunas */
 @media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+    justify-self: end;
+  }
+
   .layout {
     grid-template-columns: minmax(0, 1fr) 310px;
     gap: 2rem;
@@ -1593,6 +1622,7 @@ img.skill-icon {
   .side-col {
     position: sticky;
     top: calc(var(--header-h) + 1.5rem);
+    align-self: start;
   }
 
   .contact-grid {
@@ -1603,6 +1633,17 @@ img.skill-icon {
 
   .project-grid {
     gap: 1.25rem;
+  }
+}
+
+/* 1200px+ — título profissional em linha única */
+@media (min-width: 1200px) {
+  .hero-role > span:not(.role-sep) {
+    display: inline;
+  }
+
+  .role-sep {
+    display: inline;
   }
 }
 
