@@ -617,8 +617,8 @@
           </ul>
         </div>
 
-        <!-- Troque o endpoint abaixo pelo seu formulário do Formspree -->
-        <form class="contact-form card reveal" id="contact-form" action="https://formspree.io/f/SEU_ID" method="POST" novalidate>
+        <!-- Endpoint do Formspree (também definido em script.js) -->
+        <form class="contact-form card reveal" id="contact-form" action="https://formspree.io/f/maeoeryg" method="POST">
           <div class="form-row">
             <div class="form-field">
               <label for="contact-name" data-i18n="form.name">Nome</label>
@@ -655,6 +655,9 @@
                       placeholder="Olá Joanes, gostaria de conversar sobre..." data-i18n-placeholder="form.messagePlaceholder" aria-describedby="contact-message-error"></textarea>
             <p class="field-error" id="contact-message-error" role="alert"></p>
           </div>
+
+          <!-- Campos especiais do Formspree -->
+          <input type="hidden" name="_subject" id="contact-subject-hidden" value="Novo contato pelo portfólio" />
 
           <!-- Honeypot anti-spam do Formspree -->
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />

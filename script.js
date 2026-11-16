@@ -11,9 +11,8 @@
      1. Configuração
      ------------------------------------------------------------------------ */
 
-  // Troque aqui o endpoint do seu formulário Formspree.
-  // Ele também é aplicado ao atributo action do <form>.
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/SEU_ID';
+  // Endpoint do formulário Formspree (também aplicado ao action do <form>).
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/maeoeryg';
 
   const STORAGE_THEME = 'portfolio-theme';
   const STORAGE_LANG = 'portfolio-lang';
@@ -147,6 +146,7 @@
       'form.message': 'Mensagem',
       'form.messagePlaceholder': 'Olá Joanes, gostaria de conversar sobre...',
       'form.submit': 'Enviar mensagem',
+      'form.emailSubject': 'Novo contato pelo portfólio',
       'form.sending': 'Enviando...',
       'form.success': 'Mensagem enviada com sucesso! Responderei em breve.',
       'form.error': 'Não foi possível enviar. Tente novamente ou escreva para joaneshwc31@gmail.com.',
@@ -281,6 +281,7 @@
       'form.message': 'Message',
       'form.messagePlaceholder': "Hi Joanes, I'd like to talk about...",
       'form.submit': 'Send message',
+      'form.emailSubject': 'New message from your portfolio',
       'form.sending': 'Sending...',
       'form.success': "Message sent successfully! I'll get back to you soon.",
       'form.error': 'Something went wrong. Please try again or email joaneshwc31@gmail.com.',
@@ -402,6 +403,9 @@
       const value = t(element.dataset.i18nPlaceholder);
       if (value) element.setAttribute('placeholder', value);
     });
+
+    const emailSubjectField = document.getElementById('contact-subject-hidden');
+    if (emailSubjectField) emailSubjectField.value = t('form.emailSubject');
 
     langButtons.forEach((button) => {
       const isActive = button.dataset.lang === currentLang;
@@ -652,25 +656,30 @@
         : FORMSPREE_ENDPOINT;
 
     form.action = endpoint;
+    form.noValidate = true; // validação nativa permanece apenas como fallback sem JS
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     const nameInput = document.getElementById('contact-name');
     const emailInput = document.getElementById('contact-email');
     const messageInput = document.getElementById('contact-message');
 
-    function setFieldError(fieldName, messageKey) {
+    function applyFieldError(fieldName, message) {
       const input = document.getElementById(`contact-${fieldName}`);
       const error = document.getElementById(`contact-${fieldName}-error`);
 
       if (input) {
-        if (messageKey) {
+        if (message) {
           input.setAttribute('aria-invalid', 'true');
         } else {
           input.removeAttribute('aria-invalid');
         }
       }
 
-      if (error) error.textContent = messageKey ? t(messageKey) : '';
+      if (error) error.textContent = message || '';
+    }
+
+    function setFieldError(fieldName, messageKey) {
+      applyFieldError(fieldName, messageKey ? t(messageKey) : '');
     }
 
     function showStatus(type, key) {
@@ -747,7 +756,27 @@
           headers: { Accept: 'application/json' }
         });
 
-        if (!response.ok) throw new Error(`Formspree respondeu ${response.status}`);
+        if (!response.ok) {
+          let data = null;
+          try {
+            data = await response.json();
+          } catch (parseError) {
+            /* resposta sem JSON */
+          }
+
+          const serverErrors = Array.isArray(data?.errors)
+            ? data.errors.filter((item) => ['name', 'email', 'message'].includes(item.field))
+            : [];
+
+          if (serverErrors.length) {
+            serverErrors.forEach((item) => applyFieldError(item.field, item.message));
+            const firstField = document.getElementById(`contact-${serverErrors[0].field}`);
+            if (firstField) firstField.focus();
+          } else {
+            showStatus('error', 'form.error');
+          }
+          return;
+        }
 
         form.reset();
         showStatus('success', 'form.success');
