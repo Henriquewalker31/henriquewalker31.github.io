@@ -5,36 +5,41 @@
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-Página pessoal de portfólio com apresentação profissional, experiência, projetos, habilidades, formação, idiomas e formulário de contato. A interface inteira vive em um único `index.html`, com foto e currículo em `assets/` — sem build e sem dependências instaladas localmente.
+Portfólio pessoal de Joanes Walker, Analista de TI em Boa Vista (RR). Página estática, sem build e sem dependências instaladas localmente, voltada a recrutadores e clientes de freelance.
 
 **Online:** <https://henriquewalker31.github.io/>
 
 ## Seções
 
-- Hero com resumo profissional, localização e link para o currículo.
-- Experiência profissional e projetos pessoais com links para os repositórios.
-- Habilidades técnicas, formação acadêmica, capacitações e idiomas.
-- Contato com e-mail, telefone, LinkedIn e GitHub.
-- Formulário de contato integrado ao EmailJS.
-- Tema claro/escuro automático via `prefers-color-scheme`.
-- Animações de entrada e contadores com `IntersectionObserver`.
-- Metadados de SEO (Open Graph e Twitter), favicon, `robots.txt` e `sitemap.xml`.
-- Acessibilidade: link para pular ao conteúdo, foco visível e respeito a `prefers-reduced-motion`.
+- Hero com foto, nome, título profissional, CTAs (projetos e currículo) e estatísticas com contador animado.
+- Sobre, experiência profissional em linha do tempo e projetos em cards com thumbnails e tags.
+- Habilidades organizadas por categoria (infraestrutura, desenvolvimento, banco de dados e ferramentas).
+- Formação e certificações em cards, além de idiomas e status de disponibilidade.
+- Contato com canais diretos e formulário integrado ao Formspree.
+- Rodapé com redes sociais e botão de voltar ao topo.
+
+## Recursos
+
+- Tema claro/escuro com persistência em `localStorage`.
+- Idioma PT/EN com textos centralizados em um objeto JavaScript e persistência da escolha.
+- Navbar fixa com `backdrop-filter`, menu hambúrguer e destaque do item ativo durante a rolagem.
+- Animações de entrada com `IntersectionObserver`, respeitando `prefers-reduced-motion`.
+- Validação de formulário com mensagens de sucesso/erro e proteção antispam (honeypot).
+- Metadados de SEO/Open Graph, favicon, `robots.txt` e `sitemap.xml`.
+- Acessibilidade: HTML semântico, `alt`, `aria-label`, link de pular conteúdo, foco visível e contraste WCAG AA.
 
 ## Stack
 
 | Camada | Tecnologia |
 |---|---|
 | Marcação | HTML5 |
-| Estilo | CSS puro com variáveis e media query de tema |
+| Estilo | CSS puro com variáveis e temas |
 | Comportamento | JavaScript puro |
-| Ícones | Tabler Icons (CDN) |
-| Formulário | EmailJS (client-side) |
+| Ícones | Simple Icons e Devicon (CDN) |
+| Formulário | Formspree |
 | Hospedagem | GitHub Pages |
 
 ## Como visualizar localmente
-
-Abra `index.html` diretamente no navegador ou sirva a pasta com Python:
 
 ```bash
 git clone https://github.com/Henriquewalker31/henriquewalker31.github.io.git
@@ -44,23 +49,23 @@ python -m http.server 8000
 
 Depois acesse <http://localhost:8000>.
 
-## Deploy
+## Configuração
 
-O site é publicado pelo GitHub Pages a partir da branch `main`, na raiz do repositório.
-
-```bash
-git add .
-git commit -m "docs: atualiza conteudo"
-git push origin main
-```
-
-O Pages reconstrói automaticamente após o push.
+- **Formulário:** troque o endpoint em `FORMSPREE_ENDPOINT`, no início de `script.js`, ou diretamente no `action` do formulário em `index.html` (o `script.js` aceita qualquer um dos dois).
+- **Projetos:** substitua os placeholders `SE`, `PZ`, `SL` e `AV` pelas imagens reais (há um comentário com o exemplo de `<img>` em cada card) e troque os links `data-demo` pelas URLs de demonstração.
+- **Currículo:** mantenha o arquivo em `assets/curriculo.pdf` ou ajuste o link de download no hero.
+- **Estatísticas:** os números e rótulos do hero ficam em `index.html` (atributos `data-count`, `data-suffix` e `data-suffix-en`). Confirme o valor do card "6".
+- **Cores e tipografia:** variáveis em `:root` e no bloco `[data-theme="light"]`, no início de `style.css`.
+- **Textos PT/EN:** objeto `translations` em `script.js`.
+- **Foto:** substitua `assets/foto.jpg` mantendo o nome.
 
 ## Estrutura
 
 ```
 henriquewalker31.github.io/
-├── index.html          # HTML, CSS e JavaScript do site
+├── index.html          # marcação e conteúdo
+├── style.css           # tokens, temas, layout e responsividade
+├── script.js           # tema, idioma, menu, animações e formulário
 ├── assets/
 │   ├── foto.jpg
 │   └── curriculo.pdf
@@ -68,15 +73,17 @@ henriquewalker31.github.io/
 └── sitemap.xml
 ```
 
-## Personalização
+## Deploy
 
-- Cores e tipografia: variáveis CSS em `:root`, no início do `<style>`.
-- Contato: links de e-mail, telefone, LinkedIn e GitHub na seção de contato.
-- Formulário: `emailjs.init(...)` e os IDs de serviço/template no final do arquivo.
-- Projetos: cards com nome, descrição, stack e link para o repositório.
-- Foto e currículo: substitua `assets/foto.jpg` e `assets/curriculo.pdf` mantendo os nomes.
+O site é publicado pelo GitHub Pages a partir da branch `main`, na raiz do repositório.
 
-A chave pública do EmailJS é usada no navegador por design. Não coloque ali chaves privadas, tokens de API ou dados sensíveis.
+```bash
+git add .
+git commit -m "feat: descreva a mudança"
+git push origin main
+```
+
+O Pages reconstrói automaticamente após o push.
 
 ## Autor
 
