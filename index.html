@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joanes Walker – Portfólio</title>
+  <meta name="description" content="Portfólio de Joanes Henrique Walker Cunha, analista de TI em Boa Vista (RR), com experiência em infraestrutura, suporte e projetos de desenvolvimento web full stack." />
+  <meta name="author" content="Joanes Henrique Walker Cunha" />
+  <meta name="theme-color" content="#0f2a52" />
+  <link rel="canonical" href="https://henriquewalker31.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://henriquewalker31.github.io/" />
+  <meta property="og:title" content="Joanes Walker – Portfólio" />
+  <meta property="og:description" content="Analista de TI com experiência em infraestrutura, suporte e desenvolvimento web full stack." />
+  <meta property="og:image" content="https://henriquewalker31.github.io/assets/foto.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Joanes Walker – Portfólio" />
+  <meta name="twitter:description" content="Analista de TI com experiência em infraestrutura, suporte e desenvolvimento web full stack." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f2a52'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='700' fill='%237ab3e0' text-anchor='middle'%3EJW%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,6 +61,19 @@
       font-size: 15px;
       line-height: 1.6;
     }
+
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      z-index: 200;
+      padding: 8px 14px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .skip:focus { left: 12px; top: 12px; }
 
     /* TOPBAR */
     .topbar {
@@ -129,6 +156,8 @@
     .project-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
     .project-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
     .project-stack { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+    .project-more { display: inline-flex; margin-top: 10px; font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; }
+    .project-more:hover { text-decoration: underline; }
 
     /* SKILLS */
     .skill-row { display: flex; align-items: center; gap: 10px; margin-bottom: 11px; }
@@ -166,22 +195,22 @@
     /* RESPONSIVE */
     @media (max-width: 680px) {
       .hero-grid { grid-template-columns: 1fr; }
-  
-    .hero-photo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #2e6db4;
-      box-shadow: 0 0 0 4px rgba(55,138,221,0.15);
-      flex-shrink: 0;
-    }
-    .hero-inner { display: flex; align-items: center; gap: 1.5rem; }
-    .hero-stats { flex-direction: row; }
+      .hero-inner { align-items: flex-start; }
+      .hero-stats { flex-direction: row; }
       .stat-mini { text-align: left; min-width: unset; flex: 1; }
       .main { grid-template-columns: 1fr; padding: 1rem; }
       .topbar { padding: 0 1rem; }
-      .hero { padding: 1.5rem 1rem 1.5rem; }
+      .hero { padding: 1.5rem 1rem; }
+      .status-text { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+      .fade-up { opacity: 1; transform: none; }
     }
 
     /* Animações de entrada */
@@ -273,6 +302,8 @@
 </head>
 <body>
 
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
   <!-- TOPBAR -->
   <header class="topbar">
     <div class="topbar-left">
@@ -301,7 +332,7 @@
           <span class="badge badge-blue"><i class="ti ti-code" style="font-size:11px;" aria-hidden="true"></i>Full Stack</span>
           <span class="badge badge-green"><i class="ti ti-circle-check" style="font-size:11px;" aria-hidden="true"></i>Setor público de saúde</span>
           <span class="badge badge-blue"><i class="ti ti-school" style="font-size:11px;" aria-hidden="true"></i>ADS — Claretiano 2026</span>
-          <a href="https://github.com/Henriquewalker31" target="_blank" class="badge badge-blue" style="text-decoration:none;"><i class="ti ti-brand-github" style="font-size:11px;" aria-hidden="true"></i>GitHub</a>
+          <a href="https://github.com/Henriquewalker31" target="_blank" rel="noopener noreferrer" class="badge badge-blue" style="text-decoration:none;"><i class="ti ti-brand-github" style="font-size:11px;" aria-hidden="true"></i>GitHub</a>
         </div>
         <a class="btn-download" href="assets/curriculo.pdf" download="Curriculo_Joanes_Walker.pdf">
           <i class="ti ti-download" style="font-size:15px;" aria-hidden="true"></i>
@@ -315,15 +346,15 @@
           <div class="stat-label">unidades gerenciadas</div>
         </div>
         <div class="stat-mini">
-          <div class="stat-num">2+</div>
-          <div class="stat-label">projetos entregues</div>
+          <div class="stat-num">6</div>
+          <div class="stat-label">projetos publicados</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- MAIN -->
-  <main class="main">
+  <main class="main" id="main">
 
     <div class="left-col">
 
@@ -356,22 +387,43 @@
           <i class="ti ti-rocket card-icon" aria-hidden="true"></i>
           <span class="card-title">Projetos pessoais</span>
         </div>
+
+        <div class="project-item">
+          <div class="project-name">Sala Escura — catálogo de filmes</div>
+          <div class="project-desc">Catálogo full stack com backend em FastAPI e frontend em JavaScript puro, integrado à API do TMDB. Tem cache com TTL, busca por título, filtros por gênero e ficha técnica completa.</div>
+          <div class="project-stack">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">JavaScript</span><span class="tag">TMDB</span>
+            <a href="https://github.com/Henriquewalker31/Sala-Escura" target="_blank" rel="noopener noreferrer" class="tag tag-github"><i class="ti ti-brand-github" style="font-size:11px; margin-right:3px;" aria-hidden="true"></i>Ver no GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-name">PIGZ — API de Veículos e Tabela FIPE</div>
+          <div class="project-desc">API REST em Symfony com autenticação por token, níveis de acesso, CRUD de veículos e comparação do preço anunciado com a Tabela FIPE.</div>
+          <div class="project-stack">
+            <span class="tag">PHP</span><span class="tag">Symfony</span><span class="tag">MySQL</span><span class="tag">Docker</span>
+            <a href="https://github.com/Henriquewalker31/pigz-fipe-api" target="_blank" rel="noopener noreferrer" class="tag tag-github"><i class="ti ti-brand-github" style="font-size:11px; margin-right:3px;" aria-hidden="true"></i>Ver no GitHub</a>
+          </div>
+        </div>
+
         <div class="project-item">
           <div class="project-name">Sistema de Livraria (CRUD)</div>
-          <div class="project-desc">Sistema completo com cadastro, listagem, edição e exclusão de registros. Back-end em PHP com banco de dados MySQL e front-end em JavaScript.</div>
+          <div class="project-desc">Sistema completo com cadastro, listagem, busca, edição e exclusão de livros. Back-end em PHP com MySQL, front-end em Bootstrap e ambiente Docker.</div>
           <div class="project-stack">
-            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
-            <a href="https://github.com/Henriquewalker31/Sistema-Livraria" target="_blank" class="tag tag-github"><i class="ti ti-brand-github" style="font-size:11px; margin-right:3px;" aria-hidden="true"></i>Ver no GitHub</a>
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">Bootstrap</span>
+            <a href="https://github.com/Henriquewalker31/Sistema-Livraria" target="_blank" rel="noopener noreferrer" class="tag tag-github"><i class="ti ti-brand-github" style="font-size:11px; margin-right:3px;" aria-hidden="true"></i>Ver no GitHub</a>
           </div>
         </div>
+
         <div class="project-item">
-          <div class="project-name">Aplicativo de Autonomia de Combustível</div>
-          <div class="project-desc">Aplicação para cálculo de consumo e autonomia de veículos, com interface intuitiva voltada ao uso cotidiano por motoristas e frotas.</div>
+          <div class="project-name">AutoViagem — autonomia e custo</div>
+          <div class="project-desc">Aplicativo desktop em Electron para calcular autonomia e custo de combustível, com histórico local das simulações.</div>
           <div class="project-stack">
-            <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
-            <a href="https://github.com/Henriquewalker31/Auto-Viagem" target="_blank" class="tag tag-github"><i class="ti ti-brand-github" style="font-size:11px; margin-right:3px;" aria-hidden="true"></i>Ver no GitHub</a>
+            <span class="tag">Electron</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+            <a href="https://github.com/Henriquewalker31/Auto-Viagem" target="_blank" rel="noopener noreferrer" class="tag tag-github"><i class="ti ti-brand-github" style="font-size:11px; margin-right:3px;" aria-hidden="true"></i>Ver no GitHub</a>
           </div>
         </div>
+
         <div class="project-item">
           <div class="project-name">Presença Digital (projeto acadêmico)</div>
           <div class="project-desc">Fortalecimento da presença online de empresas locais — organização de perfis digitais e melhoria de visibilidade na internet.</div>
@@ -379,6 +431,8 @@
             <span class="tag">Next.js</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
           </div>
         </div>
+
+        <a class="project-more" href="https://github.com/Henriquewalker31?tab=repositories" target="_blank" rel="noopener noreferrer">Ver todos os repositórios →</a>
       </div>
 
       <!-- HABILIDADES -->
@@ -393,8 +447,11 @@
         <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div><span class="skill-pct">75%</span></div>
         <div class="skill-row"><span class="skill-name">MySQL</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
         <div class="skill-row"><span class="skill-name">PHP</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
+        <div class="skill-row"><span class="skill-name">Python / FastAPI</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
+        <div class="skill-row"><span class="skill-name">Docker</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:60%"></div></div><span class="skill-pct">60%</span></div>
+        <div class="skill-row"><span class="skill-name">Symfony</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:55%"></div></div><span class="skill-pct">55%</span></div>
         <div class="skill-row"><span class="skill-name">Next.js</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:60%"></div></div><span class="skill-pct">60%</span></div>
-        <div class="skill-row"><span class="skill-name">Git & GitHub</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div>
+        <div class="skill-row"><span class="skill-name">Git & GitHub</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
       </div>
 
     </div>
@@ -409,19 +466,19 @@
         </div>
         <div class="contact-row">
           <i class="ti ti-phone contact-icon" aria-hidden="true"></i>
-          <span class="contact-val">(95) 98440-1301</span>
+          <span class="contact-val"><a href="tel:+5595984401301">(95) 98440-1301</a></span>
         </div>
         <div class="contact-row">
           <i class="ti ti-mail contact-icon" aria-hidden="true"></i>
-          <span class="contact-val" style="font-size:12px;">joaneshwc31@gmail.com</span>
+          <span class="contact-val" style="font-size:12px;"><a href="mailto:joaneshwc31@gmail.com">joaneshwc31@gmail.com</a></span>
         </div>
         <div class="contact-row">
           <i class="ti ti-brand-linkedin contact-icon" aria-hidden="true"></i>
-          <span class="contact-val"><a href="https://linkedin.com/in/jhenriquewc" target="_blank">linkedin.com/in/jhenriquewc</a></span>
+          <span class="contact-val"><a href="https://linkedin.com/in/jhenriquewc" target="_blank" rel="noopener noreferrer">linkedin.com/in/jhenriquewc</a></span>
         </div>
         <div class="contact-row">
           <i class="ti ti-brand-github contact-icon" aria-hidden="true"></i>
-          <span class="contact-val"><a href="https://github.com/Henriquewalker31" target="_blank">github.com/Henriquewalker31</a></span>
+          <span class="contact-val"><a href="https://github.com/Henriquewalker31" target="_blank" rel="noopener noreferrer">github.com/Henriquewalker31</a></span>
         </div>
         <div class="contact-row">
           <i class="ti ti-map-pin contact-icon" aria-hidden="true"></i>
@@ -483,41 +540,43 @@
       <div class="form-grid">
         <div class="form-group">
           <label for="contact-name">Nome</label>
-          <input type="text" id="contact-name" placeholder="Seu nome" />
+          <input type="text" id="contact-name" placeholder="Seu nome" autocomplete="name" maxlength="80" required />
         </div>
         <div class="form-group">
           <label for="contact-email">E-mail</label>
-          <input type="email" id="contact-email" placeholder="seu@email.com" />
+          <input type="email" id="contact-email" placeholder="seu@email.com" autocomplete="email" maxlength="120" required />
         </div>
         <div class="form-group">
           <label for="contact-subject">Assunto</label>
-          <input type="text" id="contact-subject" placeholder="Ex: Oportunidade de emprego" />
+          <input type="text" id="contact-subject" placeholder="Ex: Oportunidade de emprego" maxlength="120" />
         </div>
         <div class="form-group">
           <label for="contact-company">Empresa (opcional)</label>
-          <input type="text" id="contact-company" placeholder="Nome da empresa" />
+          <input type="text" id="contact-company" placeholder="Nome da empresa" autocomplete="organization" maxlength="120" />
         </div>
         <div class="form-group full">
           <label for="contact-msg">Mensagem</label>
-          <textarea id="contact-msg" placeholder="Olá Joanes, gostaria de conversar sobre..."></textarea>
+          <textarea id="contact-msg" placeholder="Olá Joanes, gostaria de conversar sobre..." maxlength="2000" required></textarea>
         </div>
       </div>
-      <button class="btn-send" id="btn-send" onclick="sendEmail()">
+      <button class="btn-send" id="btn-send" type="button" onclick="sendEmail()">
         <i class="ti ti-send" style="font-size:15px;" aria-hidden="true"></i>
         Enviar mensagem
       </button>
-      <div class="form-msg" id="form-msg"></div>
+      <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
     </div>
   </section>
   <footer>
-    <p>Joanes Henrique Walker Cunha &nbsp;·&nbsp; joaneshwc31@gmail.com &nbsp;·&nbsp; Boa Vista, RR</p>
+    <p>© <span id="ano">2026</span> Joanes Henrique Walker Cunha &nbsp;·&nbsp; joaneshwc31@gmail.com &nbsp;·&nbsp; Boa Vista, RR</p>
   </footer>
 
 
   <script>
 
-    // EmailJS — substitua pelos seus IDs reais em emailjs.com (gratuito)
-    emailjs.init('d0CgIeStSUXcSZluE'); // <- cole sua Public Key aqui
+    // Chave pública do EmailJS (client-side, por design).
+    emailjs.init('d0CgIeStSUXcSZluE');
+
+    document.getElementById('ano').textContent = new Date().getFullYear();
 
     function sendEmail() {
       const name = document.getElementById('contact-name').value.trim();
