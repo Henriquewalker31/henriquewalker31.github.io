@@ -52,7 +52,7 @@ Depois acesse <http://localhost:8000>.
 ## Configuração
 
 - **Formulário:** endpoint configurado (`https://formspree.io/f/maeoeryg`) em `FORMSPREE_ENDPOINT` (`script.js`) e no `action` (`index.html`). Para trocar, atualize os dois — ou apenas o `script.js`, que sobrescreve o `action`.
-- **Projetos:** substitua os placeholders `SE`, `PZ`, `SL` e `AV` pelas imagens reais (há um comentário com o exemplo de `<img>` em cada card) e troque os links `data-demo` pelas URLs de demonstração.
+- **Projetos:** o Sala Escura usa `assets/salaescura-thumb.jpg` (versão otimizada de `assets/salaescura.jpeg`); os demais usam placeholders `PZ`, `SL` e `AV`. Troque os links `data-demo` pelas URLs de demonstração.
 - **Currículo:** mantenha o arquivo em `assets/curriculo.pdf` ou ajuste o link de download no hero.
 - **Estatísticas:** os números e rótulos do hero ficam em `index.html` (atributos `data-count`, `data-suffix` e `data-suffix-en`). Confirme o valor do card "6".
 - **Cores e tipografia:** variáveis em `:root` e no bloco `[data-theme="light"]`, no início de `style.css`.
@@ -68,7 +68,9 @@ henriquewalker31.github.io/
 ├── script.js           # tema, idioma, menu, animações e formulário
 ├── assets/
 │   ├── foto.jpg
-│   └── curriculo.pdf
+│   ├── curriculo.pdf
+│   ├── salaescura.jpeg
+│   └── salaescura-thumb.jpg
 ├── robots.txt
 └── sitemap.xml
 ```
