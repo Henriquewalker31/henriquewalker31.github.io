@@ -25,7 +25,7 @@
 
   const translations = {
     pt: {
-      'meta.title': 'Joanes Walker | Analista de TI — Infraestrutura, Suporte e Full Stack',
+      'meta.title': 'Henrique Walker | Analista de TI — Infraestrutura, Suporte e Full Stack',
       'meta.description': 'Portfólio de Joanes Henrique Walker Cunha — Analista de TI em Boa Vista, RR. Infraestrutura, suporte técnico, Microsoft 365 e desenvolvimento full stack.',
 
       'a11y.skip': 'Pular para o conteúdo',
@@ -160,7 +160,7 @@
     },
 
     en: {
-      'meta.title': 'Joanes Walker | IT Analyst — Infrastructure, Support & Full Stack',
+      'meta.title': 'Henrique Walker | IT Analyst — Infrastructure, Support & Full Stack',
       'meta.description': 'Portfolio of Joanes Henrique Walker Cunha — IT Analyst based in Boa Vista, Brazil. Infrastructure, technical support, Microsoft 365 and full stack development.',
 
       'a11y.skip': 'Skip to content',
