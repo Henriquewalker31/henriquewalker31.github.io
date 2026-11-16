@@ -5,7 +5,7 @@
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-Página pessoal de portfólio com apresentação profissional, experiência, projetos, habilidades, formação, idiomas e formulário de contato. Todo o site vive em um único `index.html`, sem build e sem dependências instaladas localmente.
+Página pessoal de portfólio com apresentação profissional, experiência, projetos, habilidades, formação, idiomas e formulário de contato. A interface inteira vive em um único `index.html`, com foto e currículo em `assets/` — sem build e sem dependências instaladas localmente.
 
 **Online:** <https://henriquewalker31.github.io/>
 
@@ -18,6 +18,8 @@ Página pessoal de portfólio com apresentação profissional, experiência, pro
 - Formulário de contato integrado ao EmailJS.
 - Tema claro/escuro automático via `prefers-color-scheme`.
 - Animações de entrada e contadores com `IntersectionObserver`.
+- Metadados de SEO (Open Graph e Twitter), favicon, `robots.txt` e `sitemap.xml`.
+- Acessibilidade: link para pular ao conteúdo, foco visível e respeito a `prefers-reduced-motion`.
 
 ## Stack
 
@@ -58,7 +60,12 @@ O Pages reconstrói automaticamente após o push.
 
 ```
 henriquewalker31.github.io/
-└── index.html    # HTML, CSS e JavaScript do site
+├── index.html          # HTML, CSS e JavaScript do site
+├── assets/
+│   ├── foto.jpg
+│   └── curriculo.pdf
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## Personalização
@@ -67,6 +74,7 @@ henriquewalker31.github.io/
 - Contato: links de e-mail, telefone, LinkedIn e GitHub na seção de contato.
 - Formulário: `emailjs.init(...)` e os IDs de serviço/template no final do arquivo.
 - Projetos: cards com nome, descrição, stack e link para o repositório.
+- Foto e currículo: substitua `assets/foto.jpg` e `assets/curriculo.pdf` mantendo os nomes.
 
 A chave pública do EmailJS é usada no navegador por design. Não coloque ali chaves privadas, tokens de API ou dados sensíveis.
 
