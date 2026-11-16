@@ -248,6 +248,8 @@ main {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: -0.01em;
+  flex: none;
+  white-space: nowrap;
 }
 
 .brand-mark {
