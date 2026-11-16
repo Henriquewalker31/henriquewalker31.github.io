@@ -1,13 +1,13 @@
 # Portfólio — Joanes Henrique Walker Cunha
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-222?logo=githubpages&logoColor=white)](https://henriquewalker31.github.io/-henriquewalker31.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-222?logo=githubpages&logoColor=white)](https://henriquewalker31.github.io/)
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 
 Página pessoal de portfólio com apresentação profissional, experiência, projetos, habilidades, formação, idiomas e formulário de contato. Todo o site vive em um único `index.html`, sem build e sem dependências instaladas localmente.
 
-**Online:** <https://henriquewalker31.github.io/-henriquewalker31.github.io/>
+**Online:** <https://henriquewalker31.github.io/>
 
 ## Seções
 
@@ -35,8 +35,8 @@ Página pessoal de portfólio com apresentação profissional, experiência, pro
 Abra `index.html` diretamente no navegador ou sirva a pasta com Python:
 
 ```bash
-git clone https://github.com/Henriquewalker31/-henriquewalker31.github.io.git
-cd -henriquewalker31.github.io
+git clone https://github.com/Henriquewalker31/henriquewalker31.github.io.git
+cd henriquewalker31.github.io
 python -m http.server 8000
 ```
 
@@ -57,7 +57,7 @@ O Pages reconstrói automaticamente após o push.
 ## Estrutura
 
 ```
--henriquewalker31.github.io/
+henriquewalker31.github.io/
 └── index.html    # HTML, CSS e JavaScript do site
 ```
 
