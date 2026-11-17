@@ -45,11 +45,11 @@
       'hero.ctaResume': 'Baixar currículo',
 
       'stats.units': 'unidades atendidas',
-      'stats.tickets': 'chamados registrados',
+      'stats.tickets': 'chamados no sistema modernizado',
       'stats.projects': 'projetos publicados',
 
       'status.title': 'Disponível para oportunidades',
-      'status.text': 'CLT, freelance e remoto',
+      'status.text': 'CLT e remoto',
 
       'about.eyebrow': 'Apresentação',
       'about.title': 'Sobre',
@@ -66,7 +66,7 @@
       'exp.job1.b2': 'Administração de sistemas: Microsoft 365, CRMs, sistemas internos e aplicações hospedadas no Heroku.',
       'exp.job1.b3': 'Desenvolvimento: manutenção evolutiva, reformulação de interfaces e novas funcionalidades com Python, JavaScript e PostgreSQL.',
       'exp.job1.b4': 'Melhoria contínua: automação, modernização de ferramentas internas e otimização de processos.',
-      'exp.job1.result': 'Liderei a modernização do sistema interno de atendimento usado na operação — mais de 4 mil chamados nos últimos seis meses — e fui reconhecido como destaque da semana no primeiro mês.',
+      'exp.job1.result': 'Liderei a modernização do sistema interno de atendimento da operação — o sistema registrou mais de 4 mil chamados nos últimos seis meses — e fui reconhecido como destaque da semana no primeiro mês.',
       'exp.job2.role': 'Suporte de TI (estágio)',
       'exp.job2.period': 'fev. 2026 – jul. 2026',
       'exp.job2.org': 'Prefeitura Municipal de Boa Vista · Secretaria Municipal de Saúde',
@@ -77,6 +77,7 @@
       'exp.job2.b2': 'Montagem, instalação, configuração e manutenção de computadores e periféricos.',
       'exp.job2.b3': 'Organização, triagem, recuperação, reaproveitamento e redistribuição de equipamentos de TI.',
       'exp.job2.b4': 'Participação na implantação da infraestrutura de TI de uma nova Unidade Básica de Saúde.',
+      'exp.job2.result': 'Participei da implantação e da inauguração de uma nova Unidade Básica de Saúde, respondendo pela parte tecnológica: infraestrutura, configuração dos equipamentos e da rede do posto.',
 
       'projects.eyebrow': 'Portfólio',
       'projects.title': 'Projetos',
@@ -89,9 +90,8 @@
       'project3.desc': 'Sistema completo com cadastro, listagem, busca, edição e exclusão de livros. Back-end em PHP com MySQL, front-end em Bootstrap e ambiente Docker.',
       'project4.title': 'AutoViagem — autonomia e custo',
       'project4.desc': 'Aplicativo desktop em Electron para calcular autonomia e custo de combustível, com histórico local das simulações.',
-      'projects.demo': 'Demo',
-      'projects.demoSoon': 'Demo de {name} em breve.',
       'projects.all': 'Ver todos os repositórios',
+      'projects.privateNote': 'Sistemas internos que desenvolvi na Hemissul estão em produção e não podem ser publicados. Os projetos acima são os que mantenho públicos.',
 
       'skills.eyebrow': 'Competências',
       'skills.title': 'Habilidades técnicas',
@@ -146,6 +146,7 @@
       'form.message': 'Mensagem',
       'form.messagePlaceholder': 'Olá Joanes, gostaria de conversar sobre...',
       'form.submit': 'Enviar mensagem',
+      'form.privacy': 'Os dados enviados são usados apenas para responder ao seu contato e não são compartilhados. O envio é processado pelo Formspree.',
       'form.emailSubject': 'Novo contato pelo portfólio',
       'form.sending': 'Enviando...',
       'form.success': 'Mensagem enviada com sucesso! Responderei em breve.',
@@ -180,11 +181,11 @@
       'hero.ctaResume': 'Download résumé',
 
       'stats.units': 'units supported',
-      'stats.tickets': 'tickets logged',
+      'stats.tickets': 'tickets in the modernized system',
       'stats.projects': 'published projects',
 
       'status.title': 'Available for opportunities',
-      'status.text': 'Full-time, freelance and remote',
+      'status.text': 'Full-time and remote',
 
       'about.eyebrow': 'Introduction',
       'about.title': 'About',
@@ -201,7 +202,7 @@
       'exp.job1.b2': 'Systems administration: Microsoft 365, CRMs, internal systems and applications hosted on Heroku.',
       'exp.job1.b3': 'Development: evolutionary maintenance, interface redesign and new features with Python, JavaScript and PostgreSQL.',
       'exp.job1.b4': 'Continuous improvement: automation, modernization of internal tools and process optimization.',
-      'exp.job1.result': 'I led the modernization of the internal service desk used in the operation — over 4,000 tickets in the last six months — and was recognized as employee of the week in my first month.',
+      'exp.job1.result': 'I led the modernization of the internal service desk used in the operation — the system logged over 4,000 tickets in the last six months — and was recognized as employee of the week in my first month.',
       'exp.job2.role': 'IT Support (internship)',
       'exp.job2.period': 'Feb 2026 – Jul 2026',
       'exp.job2.org': 'Boa Vista City Hall · Municipal Health Department',
@@ -212,6 +213,7 @@
       'exp.job2.b2': 'Assembly, installation, configuration and maintenance of computers and peripherals.',
       'exp.job2.b3': 'Organization, triage, recovery, reuse and redistribution of IT equipment.',
       'exp.job2.b4': 'Participated in deploying the IT infrastructure of a new primary care unit.',
+      'exp.job2.result': 'I took part in deploying and opening a new primary care unit, leading the technology side: infrastructure, equipment setup and the unit’s network.',
 
       'projects.eyebrow': 'Portfolio',
       'projects.title': 'Projects',
@@ -224,9 +226,8 @@
       'project3.desc': 'Complete system with book registration, listing, search, editing and deletion. PHP and MySQL backend, Bootstrap frontend and Docker environment.',
       'project4.title': 'AutoViagem — range and cost',
       'project4.desc': 'Desktop app built with Electron to calculate fuel range and cost, with local simulation history.',
-      'projects.demo': 'Demo',
-      'projects.demoSoon': 'Demo for {name} coming soon.',
       'projects.all': 'View all repositories',
+      'projects.privateNote': 'Internal systems I built at Hemissul are running in production and cannot be published. The projects above are the ones I keep public.',
 
       'skills.eyebrow': 'Skills',
       'skills.title': 'Technical skills',
@@ -281,6 +282,7 @@
       'form.message': 'Message',
       'form.messagePlaceholder': "Hi Joanes, I'd like to talk about...",
       'form.submit': 'Send message',
+      'form.privacy': 'Your details are only used to reply to your message and are never shared. Submission is handled by Formspree.',
       'form.emailSubject': 'New message from your portfolio',
       'form.sending': 'Sending...',
       'form.success': "Message sent successfully! I'll get back to you soon.",
@@ -612,39 +614,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     11. Toast simples (links "Demo" ainda sem URL)
-     ------------------------------------------------------------------------ */
-
-  let toastTimer = null;
-
-  function showToast(message) {
-    let toast = document.querySelector('.toast');
-
-    if (!toast) {
-      toast = document.createElement('div');
-      toast.className = 'toast';
-      toast.setAttribute('role', 'status');
-      toast.setAttribute('aria-live', 'polite');
-      document.body.appendChild(toast);
-    }
-
-    toast.textContent = message;
-    toast.classList.add('is-visible');
-
-    window.clearTimeout(toastTimer);
-    toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 2800);
-  }
-
-  document.querySelectorAll('[data-demo]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const name = link.dataset.demo || 'Demo';
-      showToast(t('projects.demoSoon').replace('{name}', name));
-    });
-  });
-
-  /* ------------------------------------------------------------------------
-     12. Formulário de contato (Formspree)
+     11. Formulário de contato (Formspree)
      ------------------------------------------------------------------------ */
 
   if (form) {
@@ -791,7 +761,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     13. Inicialização
+     12. Inicialização
      ------------------------------------------------------------------------ */
 
   const storedTheme = safeStorage.get(STORAGE_THEME);

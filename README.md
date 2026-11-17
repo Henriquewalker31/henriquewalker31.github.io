@@ -24,9 +24,10 @@ Portfólio pessoal de Joanes Walker, Analista de TI em Boa Vista (RR). Página e
 - Idioma PT/EN com textos centralizados em um objeto JavaScript e persistência da escolha.
 - Navbar fixa com `backdrop-filter`, menu hambúrguer e destaque do item ativo durante a rolagem.
 - Animações de entrada com `IntersectionObserver`, respeitando `prefers-reduced-motion`.
-- Validação de formulário com mensagens de sucesso/erro e proteção antispam (honeypot).
-- Metadados de SEO/Open Graph, favicon, `robots.txt` e `sitemap.xml`.
+- Validação de formulário com mensagens de sucesso/erro, proteção antispam (honeypot) e aviso de privacidade.
+- Metadados de SEO/Open Graph, dados estruturados `Person` (JSON-LD), favicons, `robots.txt`, `sitemap.xml` e página `404.html`.
 - Acessibilidade: HTML semântico, `alt`, `aria-label`, link de pular conteúdo, foco visível e contraste WCAG AA.
+- Sem requisições externas de imagem: ícones de tecnologia são SVGs inline e as fotos/thumbnails são servidas localmente em tamanho adequado.
 
 ## Stack
 
@@ -35,7 +36,7 @@ Portfólio pessoal de Joanes Walker, Analista de TI em Boa Vista (RR). Página e
 | Marcação | HTML5 |
 | Estilo | CSS puro com variáveis e temas |
 | Comportamento | JavaScript puro |
-| Ícones | Simple Icons e Devicon (CDN) |
+| Ícones | SVG inline (Simple Icons e Devicon) |
 | Formulário | Formspree |
 | Hospedagem | GitHub Pages |
 
@@ -52,25 +53,34 @@ Depois acesse <http://localhost:8000>.
 ## Configuração
 
 - **Formulário:** endpoint configurado (`https://formspree.io/f/maeoeryg`) em `FORMSPREE_ENDPOINT` (`script.js`) e no `action` (`index.html`). Para trocar, atualize os dois — ou apenas o `script.js`, que sobrescreve o `action`.
-- **Projetos:** o Sala Escura usa `assets/salaescura-thumb.jpg` (versão otimizada de `assets/salaescura.jpeg`); os demais usam placeholders `PZ`, `SL` e `AV`. Troque os links `data-demo` pelas URLs de demonstração.
+- **Projetos:** cada card usa uma thumbnail em `assets/*-thumb.jpg` (1200×675). Os links apontam apenas para os repositórios no GitHub, sem botões de demonstração.
 - **Currículo:** mantenha o arquivo em `assets/curriculo.pdf` ou ajuste o link de download no hero.
-- **Estatísticas:** os números e rótulos do hero ficam em `index.html` (atributos `data-count`, `data-suffix` e `data-suffix-en`). Confirme o valor do card "6".
+- **Estatísticas:** os números e rótulos do hero ficam em `index.html` (atributos `data-count`, `data-suffix` e `data-suffix-en`). Atualmente: 30+ unidades, 4 mil+ chamados no sistema modernizado e 4 projetos.
 - **Cores e tipografia:** variáveis em `:root` e no bloco `[data-theme="light"]`, no início de `style.css`.
 - **Textos PT/EN:** objeto `translations` em `script.js`.
-- **Foto:** substitua `assets/foto.jpg` mantendo o nome.
+- **Foto:** substitua `assets/foto.jpg` mantendo o nome e gere novamente `foto-264.jpg` e `foto-528.jpg` (usadas no `srcset`).
+- **Card social:** `assets/og-image.jpg` (1200×630) é a imagem exibida em compartilhamentos; `assets/apple-touch-icon.png` e `assets/favicon-32.png` completam os favicons.
 
 ## Estrutura
 
 ```
 henriquewalker31.github.io/
 ├── index.html          # marcação e conteúdo
+├── 404.html            # página de erro para o GitHub Pages
 ├── style.css           # tokens, temas, layout e responsividade
 ├── script.js           # tema, idioma, menu, animações e formulário
 ├── assets/
 │   ├── foto.jpg
+│   ├── foto-264.jpg
+│   ├── foto-528.jpg
+│   ├── og-image.jpg
+│   ├── favicon-32.png
+│   ├── apple-touch-icon.png
 │   ├── curriculo.pdf
-│   ├── salaescura.jpeg
-│   └── salaescura-thumb.jpg
+│   ├── salaescura-thumb.jpg
+│   ├── pigz-thumb.jpg
+│   ├── livraria-thumb.jpg
+│   └── autoviagem-thumb.jpg
 ├── robots.txt
 └── sitemap.xml
 ```
