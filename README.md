@@ -12,7 +12,8 @@ Portfólio pessoal de Joanes Walker, Analista de TI em Boa Vista (RR). Página e
 ## Seções
 
 - Hero com foto, nome, título profissional, CTAs (projetos e currículo) e estatísticas com contador animado.
-- Sobre, experiência profissional em linha do tempo e projetos em cards com thumbnails e tags.
+- Sobre, experiência profissional em linha do tempo (com bloco antes/depois do sistema modernizado) e projetos em cards com thumbnails e tags.
+- Recomendação de gestor na Hemissul com depoimento completo, em PT e EN.
 - Habilidades organizadas por categoria (infraestrutura, desenvolvimento, banco de dados e ferramentas).
 - Formação e certificações em cards, além de idiomas e status de disponibilidade.
 - Contato com canais diretos e formulário integrado ao Formspree.
@@ -22,7 +23,7 @@ Portfólio pessoal de Joanes Walker, Analista de TI em Boa Vista (RR). Página e
 
 - Tema claro/escuro com persistência em `localStorage`.
 - Idioma PT/EN com textos centralizados em um objeto JavaScript e persistência da escolha.
-- Navbar fixa com `backdrop-filter`, menu hambúrguer e destaque do item ativo durante a rolagem.
+- Navbar fixa, menu hambúrguer e destaque do item ativo durante a rolagem.
 - Animações de entrada com `IntersectionObserver`, respeitando `prefers-reduced-motion`.
 - Validação de formulário com mensagens de sucesso/erro, proteção antispam (honeypot) e aviso de privacidade.
 - Metadados de SEO/Open Graph, dados estruturados `Person` (JSON-LD), favicons, `robots.txt`, `sitemap.xml` e página `404.html`.
@@ -59,7 +60,7 @@ Depois acesse <http://localhost:8000>.
 - **Cores e tipografia:** variáveis em `:root` e no bloco `[data-theme="light"]`, no início de `style.css`.
 - **Textos PT/EN:** objeto `translations` em `script.js`.
 - **Foto:** substitua `assets/foto.jpg` mantendo o nome e gere novamente `foto-264.jpg` e `foto-528.jpg` (usadas no `srcset`).
-- **Card social:** `assets/og-image.jpg` (1200×630) é a imagem exibida em compartilhamentos; `assets/apple-touch-icon.png` e `assets/favicon-32.png` completam os favicons.
+- **Card social:** `assets/og-image.png` (1200×630) é a imagem exibida em compartilhamentos; `assets/favicon.svg`, `assets/favicon-32.png` e `assets/apple-touch-icon.png` completam os favicons.
 
 ## Estrutura
 
@@ -73,7 +74,8 @@ henriquewalker31.github.io/
 │   ├── foto.jpg
 │   ├── foto-264.jpg
 │   ├── foto-528.jpg
-│   ├── og-image.jpg
+│   ├── og-image.png
+│   ├── favicon.svg
 │   ├── favicon-32.png
 │   ├── apple-touch-icon.png
 │   ├── curriculo.pdf
